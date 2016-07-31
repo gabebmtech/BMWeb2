@@ -25,7 +25,7 @@
         <HeaderTemplate>
             <table class="simpleTable">
                 <tr>
-                    <th><input id="cboxSelectAllClients" type="checkbox" onclick="selectAllClients()" /></th>
+                    <th><asp:CheckBox ID="cboxSelectAllClients" runat="server" OnCheckedChanged="cboxSelectAllClients_CheckedChanged" AutoPostBack="true"/></th>
                     <th>Client Name</th>
                     <th>RL User</th>
                     <th>RL Pass</th>
@@ -38,7 +38,7 @@
         <ItemTemplate>
             <tr>
                 <td>
-                    <asp:CheckBox ID="cboxSelect2" runat="server" CssClass="client"/>
+                    <asp:CheckBox ID="cboxSelect" runat="server" CssClass="client"/>
                     <%--<input id="cboxSelect" type="checkbox" runat="server" class="client" />--%>
                 </td>
                 <td><asp:Label id="lblName" runat="server" Text='<%# Eval("ClientName") %>'></asp:Label></td>

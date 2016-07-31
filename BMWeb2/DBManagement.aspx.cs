@@ -211,5 +211,14 @@ namespace BMWeb2
                 rpClients.DataBind();
             }
         }
+
+        protected void cboxSelectAllClients_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (RepeaterItem row in rpClients.Items)
+            {
+                if (row.ItemType == ListItemType.Item || row.ItemType == ListItemType.AlternatingItem)
+                    ((CheckBox)row.FindControl("cboxSelect")).Checked = true;
+            }
+        }
     }
 }
