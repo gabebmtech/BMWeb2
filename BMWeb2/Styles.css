@@ -1,0 +1,16 @@
+﻿body {
+}
+
+.alert{
+    color: red;
+}
+
+.simpleTable{
+    margin: 10px;
+}
+.simpleTable td, .simpleTable th{
+    border: 1px solid grey;
+}
+.simpleTable tr:last-child{
+    border: none;
+}
